@@ -1,3 +1,3 @@
 [submodule "packages/ibra/magic_forms"]
 	path = packages/ibra/magic_forms
-	url = https://github.com/ibra4/Laravel-Magic-Forms.git
+	url = git@github.com:ibra4/Laravel-Magic-Forms.git
