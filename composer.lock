@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a16c3c541bd99241cab1c21ce8e83ac",
+    "content-hash": "b7a749131453d3131d2c02eaf8748746",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -807,6 +807,41 @@
                 "url"
             ],
             "time": "2021-04-26T09:17:50+00:00"
+        },
+        {
+            "name": "ibra/magic_forms",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "packages/ibra/magic_forms",
+                "reference": "09dd826c273cd3b1bce9eb331845028e411ca0ee"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Ibra\\MagicForms\\IbraMagicFormsServiceProvider"
+                    ],
+                    "aliases": {
+                        "MagicFormDataManager": "Ibra\\MagicForms\\Facades\\MagicFormDataManager"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ibra\\MagicForms\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "ibra4",
+                    "email": "ibra16@itc.hu.edu.jo"
+                }
+            ],
+            "description": "Build forms validate request and save in model in easy way",
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
             "name": "laravel/framework",
