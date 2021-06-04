@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b7a749131453d3131d2c02eaf8748746",
+    "content-hash": "8c2ce4063e2a463cabf8bb89e9948aee",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -810,11 +810,11 @@
         },
         {
             "name": "ibra/magic_forms",
-            "version": "1.0",
+            "version": "dev-75f93ef9468f1bc4972b0bacd021887bc4523738",
             "dist": {
                 "type": "path",
                 "url": "packages/ibra/magic_forms",
-                "reference": "09dd826c273cd3b1bce9eb331845028e411ca0ee"
+                "reference": "d943aa8beeee114ea22ae39f26902eb246a331f8"
             },
             "type": "library",
             "extra": {
@@ -6976,7 +6976,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "ibra/magic_forms": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

@@ -9,7 +9,7 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
-        "ibra/magic_forms": "^1.0",
+        "ibra/magic_forms": "dev-75f93ef9468f1bc4972b0bacd021887bc4523738",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5"
     },
