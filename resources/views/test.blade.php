@@ -8,7 +8,6 @@
     {!! $form['html'] !!}
 @endsection
 
-
 @section('magic_form_js')
     {!! $form['js'] !!}
 @endsection

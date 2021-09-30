@@ -8,13 +8,15 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
-    public function index(MagicFormBuilder $fb) {
+    public function index(MagicFormBuilder $fb)
+    {
         $form = $fb->create(TestForm::class);
 
         return view('test', ['form' => $form->render()]);
     }
 
-    public function store(Request $request, MagicFormBuilder $fb) {
+    public function store(Request $request, MagicFormBuilder $fb)
+    {
         $form = $fb->get(TestForm::class);
 
         $validator = $form->simpleValidate($request);
