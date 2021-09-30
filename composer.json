@@ -11,7 +11,8 @@
         "php": "^7.2.5|^8.0",
         "fideloper/proxy": "^4.4",
         "laravel/framework": "^6.20",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "ibra/magic_forms": "dev-master"
     },
     "require-dev": {
         "facade/ignition": "^1.16.4",
@@ -20,6 +21,15 @@
         "nunomaduro/collision": "^3.0",
         "phpunit/phpunit": "^8.5.8|^9.3.3"
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/ibra/magic_forms",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
@@ -32,7 +42,8 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Ibra\\MagicForms\\": "packages/ibra/magic_forms/src/"
         },
         "classmap": [
             "database/seeds",

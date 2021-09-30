@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa60de60de6a382e42b4f73eb88cf5ad",
+    "content-hash": "05361eeb40e7ae3fe1c71c42a864e534",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -370,6 +370,42 @@
                 "source": "https://github.com/fideloper/TrustedProxy/tree/4.4.1"
             },
             "time": "2020-10-22T13:48:01+00:00"
+        },
+        {
+            "name": "ibra/magic_forms",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "packages/ibra/magic_forms",
+                "reference": "e95cf815963761eb7bf18b42e8999c08ed3a8775"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Ibra\\MagicForms\\IbraMagicFormsServiceProvider"
+                    ],
+                    "aliases": {
+                        "MagicFormDataManager": "Ibra\\MagicForms\\Facades\\MagicFormDataManager"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ibra\\MagicForms\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "ibra4",
+                    "email": "ibra16@itc.hu.edu.jo"
+                }
+            ],
+            "description": "Build forms validate request and save in model in easy way",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "laravel/framework",
@@ -6534,7 +6570,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "ibra/magic_forms": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
