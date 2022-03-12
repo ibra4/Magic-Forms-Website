@@ -2,7 +2,6 @@
 
 namespace App\MagicForms;
 
-use App\User;
 use Ibra\MagicForms\Fields\TextField;
 use Ibra\MagicForms\Builder\Form\MagicForm;
 use stdClass;
@@ -20,14 +19,13 @@ class TestForm extends MagicForm
             'name' => 'name',
             'label' => 'Name',
             'rules' => 'required',
-            'value' => "haha"
         ]);
 
         $this->add(TextField::class, [
             'name' => 'age',
             'label' => 'Age',
             'rules' => 'required',
-            'placeholder' => "mmmm"
+            'placeholder' => "Test Placeholder"
         ]);
 
         $this->add(TextField::class, [
