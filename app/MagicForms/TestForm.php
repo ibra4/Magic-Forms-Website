@@ -16,22 +16,20 @@ class TestForm extends MagicForm
 
         // @TODO: Try to set field options in more readable way.
         $this->add(TextField::class, [
+            'id' => 'hi',
             'name' => 'name',
-            'label' => 'Name',
-            'rules' => 'required',
+            'class' => 'hahaha',
+            // 'disabled'
         ]);
 
         $this->add(TextField::class, [
             'name' => 'age',
-            'label' => 'Age',
-            'rules' => 'required',
-            'placeholder' => "Test Placeholder"
+            'placeholder' => "Test Placeholder",
+            'required',
         ]);
 
         $this->add(TextField::class, [
             'name' => 'email',
-            'label' => 'Email',
-            'rules' => 'required'
         ]);
 
         $this->action = route('test.store');
@@ -45,6 +43,9 @@ class TestForm extends MagicForm
 
     public function rules(): array
     {
-        return [];
+        return [
+            'name' => 'required',
+            'age' => 'required'
+        ];
     }
 }
