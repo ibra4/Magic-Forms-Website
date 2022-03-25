@@ -14,12 +14,10 @@ class TestForm extends MagicForm
         $user->name = "user name";
         $this->model = $user;
 
-        // @TODO: Try to set field options in more readable way.
         $this->add(TextField::class, [
             'id' => 'hi',
             'name' => 'name',
             'class' => 'hahaha',
-            // 'disabled'
         ]);
 
         $this->add(TextField::class, [
@@ -45,7 +43,8 @@ class TestForm extends MagicForm
     {
         return [
             'name' => 'required',
-            'age' => 'required'
+            'age' => 'required',
+            'email' => 'required|email'
         ];
     }
 }

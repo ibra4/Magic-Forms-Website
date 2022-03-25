@@ -5,14 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    @yield('magic_form_css')
     @magicFormsStyles
     <title>Document</title>
 </head>
 
 <body>
     @yield('content')
-    @yield('magic_form_js')
     @magicFormsScripts
 </body>
 
