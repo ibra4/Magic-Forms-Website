@@ -35,6 +35,7 @@ class TestForm extends MagicForm
         $this->method = "POST";
 
         $this->ajax = false;
+        $this->id = "hi";
 
         return $this;
     }

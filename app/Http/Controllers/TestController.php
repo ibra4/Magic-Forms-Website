@@ -13,7 +13,6 @@ class TestController extends Controller
         $form = $fb->create(TestForm::class);
 
         return view('test', ['form' => $form]);
-        // return view('test', ['form' => $form->render()]);
     }
 
     public function store(Request $request, MagicFormBuilder $fb)
