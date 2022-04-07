@@ -4,18 +4,19 @@ namespace App\MagicForms;
 
 use Ibra\MagicForms\Fields\TextField;
 use Ibra\MagicForms\Builder\Form\MagicForm;
+use Ibra\MagicForms\Builder\Form\MagicFormInterface;
 use Ibra\MagicForms\Fields\NumberField;
 use Ibra\MagicForms\Fields\SelectField;
 use stdClass;
 
-class TestForm extends MagicForm
+class TestForm extends MagicForm implements MagicFormInterface
 {
     public $id = "hahaha";
 
     public function build(): self
     {
         $user = new stdClass();
-        $user->name = "user name";
+        $user->email = "user name";
         $this->model = $user;
 
         $this->add(SelectField::class, [
@@ -30,19 +31,10 @@ class TestForm extends MagicForm
         ]);
 
         $this->add(TextField::class, [
-            'id' => 'hi',
-            'name' => 'name',
-            'class' => 'hahaha',
-        ]);
-
-        $this->add(TextField::class, [
-            'name' => 'age',
-            'placeholder' => "Test Placeholder",
-            'required',
-        ]);
-
-        $this->add(TextField::class, [
             'name' => 'email',
+            'placeholder' => "Enter Your Email",
+            'class' => 'email-field',
+            'required',
         ]);
 
         $this->add(NumberField::class, [
@@ -54,10 +46,11 @@ class TestForm extends MagicForm
         return $this;
     }
 
-    public function action() {
+    public function action(): string
+    {
         return route('test.store');
     }
-    
+
     public function rules(): array
     {
         return [
