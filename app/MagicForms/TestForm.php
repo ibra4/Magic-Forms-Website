@@ -40,7 +40,8 @@ class TestForm extends MagicForm implements MagicFormInterface
         $this->add(NumberField::class, [
             'name' => 'number_field',
             'min' => 5,
-            'max' => 20
+            'max' => 20,
+            'value' => 15
         ]);
 
         return $this;
