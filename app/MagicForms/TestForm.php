@@ -17,11 +17,13 @@ class TestForm extends MagicForm implements MagicFormInterface
     {
         $user = new stdClass();
         $user->email = "user name";
+        $user->names = 3;
         $this->model = $user;
 
         $this->add(SelectField::class, [
             'id' => 'hi1',
             'name' => 'names',
+            // 'value' => 2
         ], [
             'options' => [
                 '1' => 'One',
