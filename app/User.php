@@ -10,6 +10,20 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public static function boot()
+    {
+        parent::boot();
+
+        self::creating(function($model){
+            // ... code here
+        });
+
+        self::created(function($model){
+            // ... code here
+            
+        });
+    }
+    
     /**
      * The attributes that are mass assignable.
      *
@@ -36,4 +50,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function userable() {
+        return $this->morphTo();
+    }
 }

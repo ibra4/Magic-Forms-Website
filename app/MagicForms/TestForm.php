@@ -21,7 +21,7 @@ class TestForm extends MagicForm implements MagicFormInterface
         $user = new stdClass();
         $user->email = "user name";
         $user->names = 3;
-        $user->testcheckboxes = [1];
+        $user->testcheckboxes = [1, 3];
         $this->model = $user;
 
         // $this->add(CheckboxField::class, [

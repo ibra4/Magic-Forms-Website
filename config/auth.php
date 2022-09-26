@@ -46,6 +46,18 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+
+        'admin' => [
+            'driver' => 'token',
+            'provider' => 'admins',
+            'hash' => false,
+        ],
+
+        'service_provider' => [
+            'driver' => 'token',
+            'provider' => 'service_providers',
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -69,6 +81,14 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Users\sss::class
+        ],
+        'service_providers' => [
+            'driver' => 'eloquent',
+            'model' => App\Users\sss::class
         ],
 
         // 'users' => [
